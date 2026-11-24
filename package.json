@@ -1,0 +1,18 @@
+{
+  "name": "copper-and-mash-brewery",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "verify:sim": "esbuild scripts/verify.ts --bundle --platform=node --format=esm --outfile=.tmp/verify.mjs && node .tmp/verify.mjs"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^25.18.1",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}
